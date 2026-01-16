@@ -4,7 +4,7 @@
 
 ## 截图
 
-![App Screenshot](icons/app-screenshot.png)
+![App Screenshot](icons/screenshot.png)
 
 ## 功能特性
 
