@@ -1,46 +1,60 @@
 # Excel Compare
 
-Excel data comparison tool with a simple GUI. Select two Excel files, pick index columns, map columns to compare, and export a report with mismatches.
+用于对比两个 Excel 文件差异的桌面小工具（PyQt5）。选择文件、设置索引列、配置对比列，即可导出差异报告。
 
-## Features
+## 截图
 
-- GUI-based comparison (PyQt5)
-- Fast header preview for column selection
-- Column mapping with auto-match for same names
-- Normalized comparison to reduce false mismatches
-- Export result report (summary + details)
+![App Screenshot](screenshots/app_placeholder.svg)
 
-## Requirements
+## 功能特性
+
+- 图形界面操作，适合日常对比
+- 快速读取表头，避免大文件卡顿
+- 列名筛选、手动映射、同名自动匹配
+- 统一归一化，减少 0/0.0、空格等误差导致的误报
+- 导出结果（差异汇总 + 详细对比）
+
+## 运行环境
 
 - Python 3.9+
-- Windows (tested)
+- Windows（已测试）
 
-Install dependencies:
+安装依赖：
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Run
+## 使用方式
 
 ```bash
 python excel_compare.py
 ```
 
-## Build (PyInstaller)
+## 示例数据
+
+示例文件位于 `examples/`：
+
+- `examples/example_file1.xlsx`
+- `examples/example_file2.xlsx`
+
+可直接用这两个文件进行试跑，索引列选择 `ID`，对比列选择 `Name`、`Score`、`Dept`。
+
+## 打包（PyInstaller）
 
 ```powershell
 pwsh ./build.ps1 -Mode onefile -NoUPX
 ```
 
-## Project Files
+## 项目结构
 
-- `excel_compare.py` main app
-- `build.ps1` build script
-- `ExcelCompare.spec` PyInstaller spec
-- `icons/` UI assets
-- `icons/icon.ico` / `icons/icon.png` app icon
+- `excel_compare.py` 主程序
+- `build.ps1` 打包脚本
+- `ExcelCompare.spec` PyInstaller 配置
+- `icons/` UI 资源
+- `screenshots/` README 截图
+- `examples/` 示例数据
 
 ## License
 
-MIT. See `LICENSE`.
+MIT，见 `LICENSE`。
