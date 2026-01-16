@@ -4,7 +4,7 @@
 
 ## 截图
 
-![App Screenshot](icons/aa82c610-bbd6-4cdd-b8bc-4b9421661894.png)
+![App Screenshot](icons/app-screenshot.png)
 
 ## 功能特性
 
